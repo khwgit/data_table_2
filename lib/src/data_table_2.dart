@@ -98,6 +98,92 @@ class DataRow2 extends DataRow {
 
 // /// Row long press handler, won't be called if tapped cell has any tap event handlers
 // final GestureLongPressCallback? onLongPress;
+
+  _DataRow2CopyWith get copyWith => _DataRow2CopyWithImpl(this);
+}
+
+class _Freezed {
+  const _Freezed();
+}
+
+const _freezed = _Freezed();
+
+abstract class _DataRow2CopyWith {
+  const _DataRow2CopyWith();
+
+  DataRow2 call({
+    LocalKey? key,
+    bool selected = false,
+    void Function(bool?)? onSelectChanged,
+    MaterialStateProperty<Color?>? color,
+    List<DataCell>? cells,
+    double? specificRowHeight,
+    void Function()? onTap,
+    void Function()? onDoubleTap,
+    void Function()? onLongPress,
+    void Function()? onSecondaryTap,
+    void Function(TapDownDetails)? onSecondaryTapDown,
+  });
+}
+
+class _DataRow2CopyWithImpl implements _DataRow2CopyWith {
+  const _DataRow2CopyWithImpl(this._value);
+  final DataRow2 _value;
+
+  @override
+  DataRow2 call({
+    Object? key = _freezed,
+    Object? selected,
+    Object? onSelectChanged = _freezed,
+    Object? color = _freezed,
+    Object? cells,
+    Object? specificRowHeight = _freezed,
+    Object? onTap = _freezed,
+    Object? onDoubleTap = _freezed,
+    Object? onLongPress = _freezed,
+    Object? onSecondaryTap = _freezed,
+    Object? onSecondaryTapDown = _freezed,
+  }) {
+    return DataRow2(
+      key: _freezed == key ? _value.key : key as LocalKey?,
+      selected: null == selected ? _value.selected : selected as bool,
+      onSelectChanged: _freezed == onSelectChanged
+          ? _value.onSelectChanged
+          : onSelectChanged as void Function(bool?)?,
+      color: _freezed == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as MaterialStateProperty<Color?>?,
+      cells: null == cells
+          ? _value.cells
+          : cells // ignore: cast_nullable_to_non_nullable
+              as List<DataCell>,
+      specificRowHeight: _freezed == specificRowHeight
+          ? _value.specificRowHeight
+          : specificRowHeight // ignore: cast_nullable_to_non_nullable
+              as double?,
+      onTap: _freezed == onTap
+          ? _value.onTap
+          : onTap // ignore: cast_nullable_to_non_nullable
+              as void Function()?,
+      onDoubleTap: _freezed == onDoubleTap
+          ? _value.onDoubleTap
+          : onDoubleTap // ignore: cast_nullable_to_non_nullable
+              as void Function()?,
+      onLongPress: _freezed == onLongPress
+          ? _value.onLongPress
+          : onLongPress // ignore: cast_nullable_to_non_nullable
+              as void Function()?,
+      onSecondaryTap: _freezed == onSecondaryTap
+          ? _value.onSecondaryTap
+          : onSecondaryTap // ignore: cast_nullable_to_non_nullable
+              as void Function()?,
+      onSecondaryTapDown: _freezed == onSecondaryTapDown
+          ? _value.onSecondaryTapDown
+          : onSecondaryTapDown // ignore: cast_nullable_to_non_nullable
+              as void Function(TapDownDetails)?,
+    );
+  }
 }
 
 /// In-place replacement of standard [DataTable] widget, mimics it API.

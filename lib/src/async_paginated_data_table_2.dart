@@ -69,15 +69,7 @@ abstract class AsyncDataTableSource extends DataTableSource {
 
   DataRow _clone(DataRow row, bool? selected) {
     if (row is DataRow2) {
-      return DataRow2(
-          key: row.key,
-          selected: selected ?? row.selected,
-          onSelectChanged: row.onSelectChanged,
-          color: row.color,
-          cells: row.cells,
-          onTap: row.onTap,
-          onSecondaryTap: row.onSecondaryTap,
-          onSecondaryTapDown: row.onSecondaryTapDown);
+      return row.copyWith(selected: selected ?? row.selected);
     }
 
     return DataRow(
